@@ -34,7 +34,7 @@ public class SelectNodeController {
             for (String s : lists) {
                 List<String> lists2 = zooKeeper.getChildren("/" + s, watcher);
                 for (String s2 : lists2) {
-                    byte[] b = zooKeeper.getData("/" + s + "/" + s2, false, null);
+                    byte[] b = zooKeeper.getData("/" + s + "/" + s2, watcher, null);
                     System.out.println(s+s2+new String(b));
                     resultList.add(new String(b));
                 }
