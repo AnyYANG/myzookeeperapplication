@@ -19,7 +19,7 @@ package cn.liuyangjob.zk.bean;/*
 
 import java.io.Serializable;
 
-public class TlState  implements Serializable{
+public class Node  implements Serializable{
     private String ip;
     private String serverName;
     private String port;

@@ -1,21 +1,5 @@
-package cn.liuyangjob.zk.register;/*
- * ━━━━━━如来保佑━━━━━━
- * 　　　┏┓　　　┏┓
- * 　　┏┛┻━━━┛┻┓
- * 　　┃　　　━　　　┃
- * 　　┃　┳┛　┗┳　┃
- * 　　┃　　　┻　　　┃
- * 　　┗━┓　　　┏━┛
- * 　　　　┃　　　┗━━━┓
- * 　　　　┃　　　　　　　┣┓
- * 　　　　┃　　　　　　　┏┛
- * 　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　┗┻┛　┗┻┛
- * ━━━━━━永无BUG━━━━━━
- * 图灵学院-悟空老师
- * www.jiagouedu.com
- * 悟空老师QQ：245553999
- */
+package cn.liuyangjob.zk.register;
+
 
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
@@ -24,19 +8,13 @@ import java.io.IOException;
 
 public class ZookeeperRegister {
 
-  ZooKeeper zooKeeper;
-  public static final String ROOT="/tl";
-
-    public  ZooKeeper getConnection(Watcher watcher) {
+    ZooKeeper zooKeeper;
+    public  ZooKeeper getConnection(String connectString,Watcher watcher,int timeout) {
         try {
-            zooKeeper=new ZooKeeper("192.168.0.101:2181,192.168.0.102:2181,192.168.0.104:2181",6000,watcher);
+            zooKeeper=new ZooKeeper(connectString,timeout,watcher);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return  zooKeeper;
-
     }
-
-
-
 }

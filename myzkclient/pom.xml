@@ -8,5 +8,24 @@
     <artifactId>myzkclient</artifactId>
     <version>1.0</version>
 
+<dependencies>
+    <dependency>
+        <groupId>cn.liuyangjob.zk</groupId>
+        <artifactId>myzkapi</artifactId>
+        <version>1.1</version>
+    </dependency>
 
+    <dependency>
+        <groupId>org.apache.zookeeper</groupId>
+        <artifactId>zookeeper</artifactId>
+        <version>3.4.9</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.2.48</version>
+    </dependency>
+
+</dependencies>
 </project>
